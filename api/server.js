@@ -14,5 +14,13 @@ mongoose.connect("mongodb+srv://macumog:Sbuda.211@cluster0.1c7zp1s.mongodb.net/t
 
 const Todo = require('./models/todo');
 
+app.get('/todos', async (req, res) => {
+    const todos = await Todo.find();
+
+    res.json(todos);
+});
+
+
+
 
 app.listen(5200, () => console.log("server started on port 5200"));
