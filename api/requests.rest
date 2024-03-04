@@ -1,1 +1,10 @@
 Get http://localhost:5200/todos
+
+### 
+POST http://localhost:5200/todos/new
+Content-Type: application/json
+
+{
+  "text": "Get the bread",
+  
+}
